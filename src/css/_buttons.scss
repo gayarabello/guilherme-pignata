@@ -1,0 +1,40 @@
+@import "_variables.scss";
+
+button {
+  font-size: 1rem;
+  line-height: 150%;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+ 
+  &.block {
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      display: block;      
+    }
+  }
+
+  &.red {
+    color: white;
+    background-color: $red-8;
+  }
+  &.red:hover {
+    background-color: darken($red-8, 6);
+  }
+
+  &.white {
+    color: $blue-8;
+    background-color: white;
+  }
+  &.white:hover {
+    background-color: darken(white, 6);
+  }
+
+  &.blue {
+    color: white;
+    background-color: $blue-8;
+  }
+  &.blue:hover {
+    background-color: darken($blue-8, 6);
+  }
+}
