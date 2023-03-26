@@ -37,7 +37,7 @@
   </div>
 </template>
 <style lang="scss">
-//https://guipignata.netlify.app/profile.png
+
 .avatar {
   display: block;
   margin-left: 4rem;
@@ -49,7 +49,7 @@
       rgba($blue-8, 0) 0%,
       rgba($blue-8, 0.8) 97%
     ),
-    url('./../assets/avatart.png');
+    url('https://guipignata.netlify.app/profile.png');
   width: 20rem;
   height: 20rem;
   background-size: cover;
