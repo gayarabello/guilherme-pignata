@@ -1,23 +1,23 @@
 <template>
-    <div>
+  <div>
     <SiteHero />
-    <button class="white block" @click="$router.push('initial-consultation')"> Free initial Consultation</button>
+
     <ServiceItem
-      v-for="{title, id, description, action} in services"
+      v-for="{ title, id, description, action, subtitle } in services"
       :serviceId="id"
       :key="title"
       :title="title"
       :description="description"
+      :subtitle="subtitle"
       :action="action"
     />
-    </div>
+  </div>
 </template>
 
 <script>
-
 import SiteHero from "@/components/SiteHero.vue";
 import ServiceItem from "@/components/ServiceItem.vue";
-import services from '@/data/services.js'
+import services from "@/data/services.js";
 
 export default {
   name: "HomePage",
@@ -27,7 +27,7 @@ export default {
   },
   setup() {
     return {
-      services
+      services,
     };
   },
 };

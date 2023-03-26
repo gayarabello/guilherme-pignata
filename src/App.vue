@@ -1,7 +1,7 @@
 <template>
-  <div  class="px-5">
+  <div style="max-width: 900px; margin: 0 auto"  class="px-5">
     <BaseHeader/>
-    <router-view></router-view>
+    <router-view ></router-view>
   </div>
 </template>
 
