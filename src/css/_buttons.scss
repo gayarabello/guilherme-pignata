@@ -6,6 +6,7 @@ button {
   border: none;
   padding: 0.5rem 1rem;
   font-weight: 600;
+  cursor: pointer;
  
   &.block {
     @media screen and (max-width: 600px) {

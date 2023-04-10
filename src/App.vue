@@ -1,5 +1,5 @@
 <template>
-  <div style="max-width: 900px; margin: 0 auto"  class="px-5">
+  <div >
     <BaseHeader/>
     <router-view ></router-view>
   </div>

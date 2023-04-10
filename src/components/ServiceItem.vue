@@ -9,21 +9,29 @@
       {{ action }}
     </button>
   </div>
-  <div class="desktop flex my-8 py-6">
-    <div style="flex: 6; ">
-      <h3 style="font-size: 2rem; color: white; max-width: 360px; padding: 2rem; background-color: rgba(0,0,0,0.4)">{{ subtitle }}</h3>
+  <div style="max-width: 960px; margin: 3rem auto; align-items: center;" class="desktop flex my-8 py-6">
+    <div class="col-6">
+      <h3 :style="{backgroundImage: `url(${backgroundUrl})`, backgroundSize: 'cover'}" class="subtitle">{{ subtitle }}</h3>
     </div>
-    <div style="flex: 6; max-width: 400px;" >
-      <h3 style="text-transform: uppercase">
+    <div class="title">
+      <h3 class="my-4" style="text-transform: uppercase; font-weight: 900;">
         {{ title }}
       </h3>
       <p v-html="description"></p>
       <button
-        @click="router.push(`/service/${serviceId}`)"
+      
+        @click="router.push('initial-consultation')"
         class="my-4 red block"
       >
-        {{ action }}
+        Book a free consultation
       </button>
+      <button
+        @click="router.push(`/service/${serviceId}`)"
+        style="color: #172835; border: 1px solid #172835"
+        class="my-4 mx-4"
+      >
+      See Plans
+    </button>
     </div>
   </div>
 </template>
@@ -54,15 +62,35 @@ export default {
       required: true,
     },
   },
-  setup() {
+  setup(props) {
     const router = useRouter();
+    const backgroundUrl = require(`@/assets/images/${props.serviceId}.png`)
+    
     return {
+      backgroundUrl,
       router,
     };
   },
 };
 </script>
 <style lang="scss">
+.subtitle {
+  font-size: 1.5rem;
+  line-height: 130%;
+  padding: 5rem 3rem;
+  color: white;
+  max-width: 360px;    
+}
+
+.col-6 {
+  flex: 6
+}
+
+.title {
+  flex: 6;
+  max-width: 400px;
+}
+
 .service-item {
   max-width: 30%;
   @media screen and (max-width: 960px) {

@@ -16,7 +16,7 @@ export default [
     `,
     action: "See More",
   },
-  {
+/*   {
     id: "jiu-jitsu",
     title: "BRAZILIAN JIU JITSU/SELF DEFENCE",
     subtitle: "It enhances mental focus and discipline and reduces stress and anxiety, boosting confidence and self-esteem.",
@@ -26,5 +26,5 @@ export default [
       <br>
       It can also help improve balance and coordination, which can be especially beneficial for older adults or those with mobility issues.`,
     action: "See More",
-  },
+  }, */
 ];
