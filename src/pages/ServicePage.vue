@@ -233,11 +233,15 @@ button {
   font-size: 12px !important;
 }
 .pay-selected {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
   background-color: white;
   border: 2px solid white;
-  color: white;
+  color: $blue-8;
 }
 .pay-not-selected {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
   background-color: $blue-8;
   color: white;
   border: 2px solid white;
