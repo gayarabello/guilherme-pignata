@@ -30,6 +30,7 @@
         <v-row no-gutters>
           <v-col cols="12" md="6">
             <PlanItem
+              :min="true"
               @show-base-package="toggleBasePackage(true)"
               :price="400"
               name="Base"
@@ -38,6 +39,7 @@
           </v-col>
           <v-col cols="12" md="6">
             <PlanItem
+              :min="true"
               @show-base-package="toggleBasePackage(true)"
               :price="600"
               name="Full"
@@ -95,7 +97,12 @@
       </div>
     </template>
     <div class="text-center mb-12">
-      <v-btn href="https://calendly.com/coachgui" target="_blank" variant="flat" color="red">
+      <v-btn
+        href="https://calendly.com/coachgui"
+        target="_blank"
+        variant="flat"
+        color="red"
+      >
         Book a free initial consultation
       </v-btn>
     </div>

@@ -1,7 +1,8 @@
 <template>
   <v-sheet class="ma-2 pa-8">
     <h4 class="mb-3">{{ name }}</h4>
-    <h2 class="mb-3">£{{price}}<span class="font-weight-regular">/month</span></h2>
+    <h2>£{{price}}<span class="font-weight-regular">/month</span></h2>
+    <h5 class="mb-3" v-if="min">*minimum of 3 months</h5>
     <ul>
       <li class="cursor-pointer" @click="$emit('show-base-package')">
         <p class="font-weight-bold text-blue text-link">
@@ -29,6 +30,10 @@ export default defineComponent({
         name: {
             type: String,
             required: true
+        },
+        min: {
+            type: Boolean,
+            default: false
         },
         sessions: {
             type: String,
