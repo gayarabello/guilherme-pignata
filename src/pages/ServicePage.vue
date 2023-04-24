@@ -69,7 +69,7 @@
             <v-col cols="12" md="4">
               <PlanItem
                 @show-base-package="toggleBasePackage(true)"
-                :price="quarterValues ? 400 : 350"
+                :price="quarterValues ? 50 : 70"
                 name="Let's get started"
                 sessions="One"
               />
@@ -77,7 +77,7 @@
             <v-col cols="12" md="4">
               <PlanItem
                 @show-base-package="toggleBasePackage(true)"
-                :price="quarterValues ? 400 : 350"
+                :price="quarterValues ? 90 : 120"
                 name="I Need a Push"
                 sessions="Four"
               />
@@ -85,7 +85,7 @@
             <v-col cols="12" md="4">
               <PlanItem
                 @show-base-package="toggleBasePackage(true)"
-                :price="quarterValues ? 400 : 350"
+                :price="quarterValues ? 150 : 200"
                 name="Follow me Closely"
                 sessions="Eight"
               />
