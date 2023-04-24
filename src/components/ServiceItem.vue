@@ -1,38 +1,62 @@
 <template>
-  <div class="mobile service-item my-8 py-2">
-    <h4 class="my-4">{{ title }}</h4>
-    <p v-html="description"></p>
-    <button
-      @click="router.push(`/service/${serviceId}`)"
-      class="my-4 red block"
-    >
-      {{ action }}
-    </button>
-  </div>
-  <div style="max-width: 960px; margin: 3rem auto; align-items: center;" class="desktop flex my-8 py-6">
-    <div class="col-6">
-      <h3 :style="{backgroundImage: `url(${backgroundUrl})`, backgroundSize: 'cover'}" class="subtitle">{{ subtitle }}</h3>
-    </div>
-    <div class="title">
-      <h3 class="my-4" style="text-transform: uppercase; font-weight: 900;">
-        {{ title }}
-      </h3>
+  <div class="mobile">
+    <div class="my-8 py-2 px-6">
+      <h4 class="my-4">{{ title }}</h4>
       <p v-html="description"></p>
-      <button
-      
+      <v-btn
+        variant="flat"
+        color="red"
         @click="router.push('initial-consultation')"
-        class="my-4 red block"
+        class="my-4"
       >
-        Book a free consultation
-      </button>
-      <button
+        Book consultation
+      </v-btn>
+      <v-btn
         @click="router.push(`/service/${serviceId}`)"
-        style="color: #172835; border: 1px solid #172835"
-        class="my-4 mx-4"
+        variant="outlined"
+        class="my-4 ml-4"
       >
-      See Plans
-    </button>
+        See Plans
+      </v-btn>
     </div>
+  </div>
+  <div class="desktop">
+    <v-container class="container">
+      <v-row class="align-center my-2 py-2">
+        <v-col cols="12" md="6">
+          <h3
+            :style="{
+              backgroundImage: `url(${backgroundUrl})`,
+              backgroundSize: 'cover',
+            }"
+            class="subtitle"
+          >
+            {{ subtitle }}
+          </h3>
+        </v-col>
+        <v-col cols="12" md="6">
+          <h3 class="my-4 text-uppercase font-weight-bold">
+            {{ title }}
+          </h3>
+          <p v-html="description"></p>
+          <v-btn
+            variant="flat"
+            color="red"
+            @click="router.push('initial-consultation')"
+            class="my-4"
+          >
+            Book consultation
+          </v-btn>
+          <v-btn
+            @click="router.push(`/service/${serviceId}`)"
+            variant="outlined"
+            class="my-4 ml-4"
+          >
+            See Plans
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -64,8 +88,8 @@ export default {
   },
   setup(props) {
     const router = useRouter();
-    const backgroundUrl = require(`@/assets/images/${props.serviceId}.png`)
-    
+    const backgroundUrl = require(`@/assets/images/${props.serviceId}.png`);
+
     return {
       backgroundUrl,
       router,
@@ -79,22 +103,5 @@ export default {
   line-height: 130%;
   padding: 5rem 3rem;
   color: white;
-  max-width: 360px;    
-}
-
-.col-6 {
-  flex: 6
-}
-
-.title {
-  flex: 6;
-  max-width: 400px;
-}
-
-.service-item {
-  max-width: 30%;
-  @media screen and (max-width: 960px) {
-    max-width: 100%;
-  }
 }
 </style>

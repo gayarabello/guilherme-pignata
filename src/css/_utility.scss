@@ -1,5 +1,9 @@
 @import "_variables.scss";
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .desktop {
   @media screen and (min-width: 960px) {
     display: block;
@@ -30,7 +34,7 @@ a {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 960px !important;
   margin: 0 auto;
 }
 
@@ -59,7 +63,7 @@ a {
   background-color: $blue-8;
 }
 .bg-blue-9 {
-  background-color: $blue-8;
+  background-color: $blue-9;
 }
 
 .bg-red-1 {
@@ -138,17 +142,4 @@ a {
 }
 .text-red-8 {
   color: $red-8;
-}
-
-.flex {
-  display: flex;
-}
-.space-between {
-  justify-content: space-between;
-}
-.flex-center {
-  justify-content: center;
-}
-.items-center {
-  align-items: center;
 }

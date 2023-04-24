@@ -1,7 +1,6 @@
 <template>
   <div>
     <SiteHero />
-
     <ServiceItem
       v-for="{ title, id, description, action, subtitle } in services"
       :serviceId="id"
@@ -11,88 +10,28 @@
       :subtitle="subtitle"
       :action="action"
     />
-    <div
-      style="
-        background-color: #f1f1f1;
-        height: 280px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      "
-    >
-      <div style="max-width: 960px">
-        <div
-          style="
-            font-size: 30px;
-            font-weight: 700;
-            line-height: 120%;
-            color: #1a2e3c;
-          "
-        >
-          “I have a bad knee and need to strengthen without injuring it.”
-        </div>
-        <div
-          style="
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 160%;
-            margin-top: 1rem;
-          "
-        >
-          — Anne Spackman, 65yo
-        </div>
+    <div class="bg-blue-grey-lighten-5 text-center py-12">
+      <div class="container text-blue-grey-darken-4">
+        <h2>“I have a bad knee and need to strengthen without injuring it.”</h2>
+        <h3 class="mt-5">— Anne Spackman, 65yo</h3>
       </div>
     </div>
-    <div style="background-color: #172835">
-      <div
-        style="
-          max-width: 960px;
-          margin: 0 auto;
-          color: white;
-          display: flex;
-          align-items: center;
-        "
-      >
-        <div style="flex: 1; padding-right: 2rem">
-          <div style="font-size: 24px; font-weight: 700; line-height: 120%">
-            BRAZILIAN JIU JITSU / SELF DEFENSE
-          </div>
-          <div
-            style="
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 150%;
-              margin-top: 1rem;
-            "
-          >
+<!--     <div class="bg-blue-grey-darken-4">
+      <div class="container text-white d-flex align-center">
+        <div>
+          <h3>BRAZILIAN JIU JITSU / SELF DEFENSE</h3>
+          <p>
             Enhance mental focus and reduces stress with this Brazilian martial
             art
-          </div>
-          <button @click="router.push(`/service/`)" class="my-4 red block">
+          </p>
+          <button @click="router.push(`/service/`)" class="mt-4 red block">
             Ask for info
           </button>
         </div>
-        <div
-          style="
-            position: relative;
-            flex: 1;
-            width: 100%;
-            height: 260px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-image: linear-gradient(
-                90deg,
-                #172835 14%,
-                rgba(0, 0, 0, 0) 80%,
-                #172835 100%
-              ),
-              url('https://images.unsplash.com/photo-1624938518616-3be0add427d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
-          "
-        ></div>
+        <div class="image-jiu"></div>
       </div>
-    </div>
-  <BaseFooter/>
+    </div> -->
+    <BaseFooter />
   </div>
 </template>
 
@@ -102,8 +41,9 @@ import BaseFooter from "@/components/BaseFooter.vue";
 import ServiceItem from "@/components/ServiceItem.vue";
 import services from "@/data/services.js";
 import logo from "@/assets/images/logo.svg";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   name: "HomePage",
   components: {
     BaseFooter,
@@ -116,5 +56,23 @@ export default {
       services,
     };
   },
-};
+});
 </script>
+
+<style lang="scss" scoped>
+.image-jiu {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: 260px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      90deg,
+      #263238 14%,
+      rgba(0, 0, 0, 0) 80%,
+      #263238 100%
+    ),
+    url("https://images.unsplash.com/photo-1624938518616-3be0add427d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+}
+</style>
