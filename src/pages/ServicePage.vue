@@ -234,12 +234,12 @@ button {
 }
 .pay-selected {
   background-color: white;
-  border: 4px solid $blue-8;
-  color: $blue-8;
+  border: 2px solid white;
+  color: white;
 }
 .pay-not-selected {
   background-color: $blue-8;
   color: white;
-  border: 4px solid white;
+  border: 2px solid white;
 }
 </style>
