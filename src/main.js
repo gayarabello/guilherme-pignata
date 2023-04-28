@@ -32,6 +32,9 @@ const vuetify = createVuetify({
 });
 
 const router = createRouter({
+  scrollBehavior() {    
+    return { top: 0 }
+  },
   history: createWebHashHistory(),
   routes,
 });
