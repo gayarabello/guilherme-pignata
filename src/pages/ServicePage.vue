@@ -15,7 +15,7 @@
           </span>
           <span class="font-weight-light"> PROGRAMS </span>
         </h2>
-        <h4 class="pt-4 pb-8">
+        <h4 class="pt-4 pb-8 px-6">
           {{
             isHealthCoachPage
               ? "Learn how to make sustainable lifestyle changes in even the busiest of lives"
@@ -24,7 +24,6 @@
         </h4>
       </div>
     </div>
-
     <template v-if="isHealthCoachPage">
       <v-container class="container">
         <v-row no-gutters>
@@ -54,16 +53,16 @@
         <div class="container text-center mb-3">
           <v-btn-toggle
             mandatory
-            v-model="quarterValues"
+            v-model="payAsYouGo"
             rounded="xl"
             size="x-small"
           >
-            <v-btn :class="quarterValues ? 'pay-not-selected' : 'pay-selected'"
-              >Pay as you go</v-btn
-            >
-            <v-btn :class="quarterValues ? 'pay-selected' : 'pay-not-selected'"
+            <v-btn :class="payAsYouGo ? 'pay-not-selected' : 'pay-selected'"
               >3 months commitment
             </v-btn>
+            <v-btn :class="!payAsYouGo ? 'pay-not-selected' : 'pay-selected'"
+              >Pay as you go</v-btn
+            >
           </v-btn-toggle>
         </div>
         <v-container class="container">
@@ -71,7 +70,7 @@
             <v-col cols="12" md="4">
               <PlanItem
                 @show-base-package="toggleBasePackage(true)"
-                :price="quarterValues ? 50 : 70"
+                :price="payAsYouGo ? 80 : 70"
                 name="Let's get started"
                 sessions="One"
               />
@@ -79,17 +78,17 @@
             <v-col cols="12" md="4">
               <PlanItem
                 @show-base-package="toggleBasePackage(true)"
-                :price="quarterValues ? 90 : 120"
+                :price="payAsYouGo ? 150 : 130"
                 name="I Need a Push"
-                sessions="Four"
+                sessions="Two"
               />
             </v-col>
             <v-col cols="12" md="4">
               <PlanItem
                 @show-base-package="toggleBasePackage(true)"
-                :price="quarterValues ? 150 : 200"
+                :price="payAsYouGo ? 280 : 230"
                 name="Follow me Closely"
-                sessions="Eight"
+                sessions="Four"
               />
             </v-col>
           </v-row>
@@ -206,7 +205,7 @@ export default defineComponent({
     const isHealthCoachPage = computed(() =>
       route.params.id.includes("health")
     );
-    const quarterValues = ref(0);
+    const payAsYouGo = ref(0);
     const showHCBasePackage = ref(false);
     const showPTBasePackage = ref(false);
     return {
@@ -214,7 +213,7 @@ export default defineComponent({
       router,
       plans,
       services,
-      quarterValues,
+      payAsYouGo,
       isHealthCoachPage,
       showPTBasePackage,
       showHCBasePackage,
