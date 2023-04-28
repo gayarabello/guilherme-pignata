@@ -22,11 +22,20 @@
           >Initial Consultation</v-btn
         >
       </v-col>
-      <v-col cols="12" md="3" class="pl-8">
+      <v-col cols="12" md="4" class="pl-6">
         <h3 class="mb-8">Let's get started!</h3>
-        <h5>07864 7863 09</h5>
-        <h5 class="my-4 mx-none">coachgui.fitnutri@gmail.com</h5>
-        <h5>@coachguipignata</h5>
+        <h5><v-icon>mdi-whatsapp</v-icon> 07864 7863 09</h5>
+
+        <h5 class="my-4 mx-none">
+          <v-icon>mdi-email</v-icon> coachguipignata@gmail.com
+        </h5>
+
+        <a href="http://www.instagram.com/coachguipignata" target="_blank">
+        <h5>
+          <v-icon>mdi-instagram</v-icon>
+            @coachguipignata
+          </h5>
+        </a>
         <h6 class="mt-12 mobile">©2023 All rights reserved.</h6>
       </v-col>
     </v-row>

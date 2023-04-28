@@ -25,12 +25,12 @@
           <img :src="logo" alt="logo" height="40" />
         </div>
         <div class="flex align-baseline">
-          <router-link to="/">Home</router-link>
-          <router-link to="/service/personal-training"
+          <router-link class="py-2 px-3 mx-1" to="/">Home</router-link>
+          <router-link class="py-2 px-3 mx-1" to="/service/personal-training"
             >Personal Training</router-link
           >
-          <router-link to="/service/health-coach">Health Coaching</router-link>
-          <router-link to="/initial-consultation"
+          <router-link class="py-2 px-3 mx-1" to="/service/health-coach">Health Coaching</router-link>
+          <router-link class="py-2 px-3 mx-1" to="/initial-consultation"
             >Initial Consultation</router-link
           >
         </div>
