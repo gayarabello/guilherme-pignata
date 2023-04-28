@@ -19,9 +19,11 @@
 
       <div class="d-flex flex-column">
         <router-link class="mb-4" to="/">Home</router-link>
-        <router-link class="mb-4" to="/service/health-coach">Health Coach</router-link>
         <router-link class="mb-4" to="/service/personal-training"
           >Personal Training</router-link
+        >
+        <router-link class="mb-4" to="/service/health-coach"
+          >Health Coaching</router-link
         >
         <v-btn
           size="small"

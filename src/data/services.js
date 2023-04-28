@@ -1,19 +1,19 @@
 export default [
   {
-    id: "health-coach",
-    title: "HEALTH COACH",
-    subtitle: "Learn how to make sustainable lifestyle changes in even the busiest of lives",
-    description:
-      "Some of the leading causes of death in the western world can be prevented, stoped or even reversed just by implementing good dietary habits and regular exercise into your daily life.",
-    action: "See More",
-  },
-  {
     id: "personal-training",
     title: "PERSONAL TRAINING",
     subtitle: "Engaging in physical activity helps to maintain a healthy body weight and improve overall quality of life",
     description:
     `Regular exercise has numerous benefits, including improving cardiovascular health, building strength and endurance, reducing the risk of chronic diseases such as diabetes and obesity, and enhancing mental health by reducing stress and anxiety.    
     `,
+    action: "See More",
+  },
+  {
+    id: "health-coach",
+    title: "HEALTH COACHING",
+    subtitle: "Learn how to make sustainable lifestyle changes in even the busiest of lives",
+    description:
+      "Some of the leading causes of death in the western world can be prevented, stoped or even reversed just by implementing good dietary habits and regular exercise into your daily life.",
     action: "See More",
   },
 /*   {

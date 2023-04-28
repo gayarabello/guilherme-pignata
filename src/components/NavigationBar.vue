@@ -26,10 +26,10 @@
         </div>
         <div class="flex align-baseline">
           <router-link to="/">Home</router-link>
-          <router-link to="/service/health-coach">Health Coach</router-link>
           <router-link to="/service/personal-training"
             >Personal Training</router-link
           >
+          <router-link to="/service/health-coach">Health Coaching</router-link>
           <router-link to="/initial-consultation"
             >Initial Consultation</router-link
           >
