@@ -3,9 +3,10 @@
     <h1>Expert guidance for a healthier you.</h1>
     <div class="avatar mt-n12"></div>
     <h2 class="mt-n12">
-      Level 3 accredited Personal Trainer and Nutrition Advisor specialized in:
+      Level 3 accredited Personal Trainer and Nutrition Advisor
     </h2>
-    <ul class="my-3">
+    <h3 class="text-overline mt-3">Specialised in:</h3>
+    <ul class="mb-3">
       <li>Pre & Post Natal Training</li>
       <li>Senior Fitness</li>
       <li>Preventing & Managing Diabetes</li>
@@ -25,7 +26,8 @@
       <v-col>
         <h1>Expert guidance for a healthier you</h1>
         <h4>Level 3 accredited Personal Trainer and Nutrition Advisor</h4>
-        <ul class="my-3">
+        <h3 class="text-overline mt-3">Specialised in:</h3>
+        <ul class="mb-3">
           <li>Pre & Post Natal Training</li>
           <li>Senior Fitness</li>
           <li>Preventing & Managing Diabetes</li>
