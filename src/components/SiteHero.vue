@@ -28,9 +28,9 @@
         <h4>Level 3 accredited Personal Trainer and Nutrition Advisor</h4>
         <h3 class="text-overline mt-3">Specialised in:</h3>
         <ul class="mb-3">
-          <li>Pre & Post Natal Training</li>
-          <li>Senior Fitness</li>
+          <li>Wellbeing & Mobility</li>
           <li>Preventing & Managing Diabetes</li>
+          <li>Pre & Post Natal Training</li>
         </ul>
 
         <v-btn
